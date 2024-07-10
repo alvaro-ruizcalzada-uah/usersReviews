@@ -9,7 +9,6 @@ import java.util.List;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/api")
 public class ReviewsController {
 
     private IReviewsService reviewsService;
@@ -26,7 +25,7 @@ public class ReviewsController {
 
     @GetMapping("/reviews/{id}")
     public Review findReviewsById(@PathVariable("id") Integer id) {
-        return reviewsService.findReviewsById(id);
+        return reviewsService.findReviewById(id);
     }
 
     @PostMapping("/reviews")

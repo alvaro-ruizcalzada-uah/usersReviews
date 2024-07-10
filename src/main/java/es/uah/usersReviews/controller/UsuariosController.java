@@ -9,7 +9,6 @@ import java.util.List;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/api")
 public class UsuariosController {
 
     private IUsuariosService usuariosService;
@@ -32,6 +31,11 @@ public class UsuariosController {
     @GetMapping("/usuarios/name/{name}")
     public Usuario findUserByName(@PathVariable("name") String name) {
         return usuariosService.findUserByName(name);
+    }
+
+    @GetMapping("/usuarios/login/{correo}/{clave}")
+    public Usuario findUserByEmailAndPassword(@PathVariable("correo") String email, @PathVariable("clave") String password) {
+        return usuariosService.findUserByEmailAndPassword(email, password);
     }
 
     @PostMapping("/usuarios")

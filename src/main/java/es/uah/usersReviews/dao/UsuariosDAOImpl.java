@@ -39,6 +39,13 @@ public class UsuariosDAOImpl implements IUsuariosDAO {
     }
 
     @Override
+    public Usuario findUserByEmailAndPassword(String email, String password) {
+        Optional<Usuario> optional =
+                Optional.ofNullable(usuariosJPA.findByCorreoAndClave(email, password));
+        return optional.orElse(null);
+    }
+
+    @Override
     public void saveUser(Usuario user) {
         usuariosJPA.save(user);
     }

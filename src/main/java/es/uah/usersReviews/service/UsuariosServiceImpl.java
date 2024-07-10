@@ -33,6 +33,10 @@ public class UsuariosServiceImpl implements IUsuariosService {
         return usuariosDAO.findUserByEmail(email);
     }
 
+    public Usuario findUserByEmailAndPassword(String email, String password) {
+        return usuariosDAO.findUserByEmailAndPassword(email, password);
+    }
+
     @Override
     public void saveUser(Usuario usuario) {
         usuariosDAO.saveUser(usuario);

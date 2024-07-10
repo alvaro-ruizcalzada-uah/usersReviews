@@ -24,7 +24,7 @@ public class ReviewsServiceImpl implements IReviewsService {
     }
 
     @Override
-    public Review findReviewsById(Integer idReview) {
+    public Review findReviewById(Integer idReview) {
         return reviewsDAO.findReviewById(idReview);
     }
 

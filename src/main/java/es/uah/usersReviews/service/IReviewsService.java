@@ -10,7 +10,7 @@ public interface IReviewsService {
 
     List<Review> findReviewsByIdFilm(Integer idFilmm);
 
-    Review findReviewsById(Integer idReview);
+    Review findReviewById(Integer idReview);
 
     void saveReview(Review review);
 

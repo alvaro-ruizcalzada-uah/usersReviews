@@ -9,4 +9,6 @@ public interface IUsuariosJPA extends JpaRepository<Usuario, Integer> {
 
     Usuario findByCorreo(String email);
 
+    Usuario findByCorreoAndClave(String email, String password);
+
 }
