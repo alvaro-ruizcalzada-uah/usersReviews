@@ -35,7 +35,7 @@ public class Usuario {
     @JoinTable(name = "Users_has_Authorities", joinColumns = {
             @JoinColumn(name = "Users_idUsuario", referencedColumnName = "idUsuario")}, inverseJoinColumns = {
             @JoinColumn(name = "Authorities_idRol", referencedColumnName = "idRol")})
-    private List<Rol> rols;
+    private List<Rol> roles;
 
     public void addReview(Review review) {
         getReviews().add(review);
